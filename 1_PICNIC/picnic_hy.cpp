@@ -22,7 +22,7 @@ int mate(vector<bool> &isFinished, int startFlag) {
     for (int i = startFlag; i < n; i++) {
         if (isFinished[i] == false) {
             for (int j = i + 1; j < n; ++j) {
-                if ((isFriend[i][j] == true) && (isFinished[j] == false)) {
+                if ((isFriend[i][j]) && (!isFinished[j])) {
                     isFinished[i] = true;
                     isFinished[j] = true;
                     ret += mate(isFinished, i + 1);
