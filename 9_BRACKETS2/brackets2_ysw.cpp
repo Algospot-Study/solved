@@ -45,3 +45,4 @@ int main() {
         if (isMatched(inputString, inputStack)) cout << "YES" << endl;
         else cout << "NO" << endl;
     }
+}
