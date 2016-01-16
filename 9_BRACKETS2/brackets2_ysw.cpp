@@ -38,8 +38,4 @@ int main() {
         if (isMatched(inputString)) cout << "YES" << endl;
         else cout << "NO" << endl;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/master
