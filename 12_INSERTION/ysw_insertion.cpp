@@ -92,7 +92,7 @@ Node *kth(Node *root, int k) {
 int main() {
     int testCase;
     cin >> testCase;
-    while (--testCase) {
+    while (testCase--) {
         int arrSize;
         cin >> arrSize;
         vector<int> inputArr(arrSize);
@@ -104,13 +104,13 @@ int main() {
             root = insert(root, new Node(i + 1));
         }
 
-        for (int i = arrSize; i > 0; i--) {
-            outputArr[i] = kth(root, arrSize-inputArr[i])->key;
+        for (int i = arrSize - 1; i >= 0; i--) {
+            outputArr[i] = kth(root, root->size - inputArr[i])->key;
             root = erase(root, outputArr[i]);
         }
 
-        for(int element : outputArr){
-            cout << element << endl;
-        }
+        for (int element : outputArr)
+            cout << element << " ";
+        cout << endl;
     }
 }
